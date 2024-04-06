@@ -13,7 +13,7 @@ if [ ! -f "$PYFILE" ]; then
 fi
 
 # Compile the Python script file
-python -m py_compile "$PYFILE"
+python3 -m py_compile "$PYFILE"
 
 # Check if compilation was successful
 if [ $? -ne 0 ]; then
@@ -22,5 +22,4 @@ if [ $? -ne 0 ]; then
 fi
 
 # Rename the compiled file
-mv "${PYFILE}c" "${PYFILE}c"
-
+mv "${PYFILE}" "${PYFILE}c"
